@@ -12,32 +12,32 @@
 // DIACHIARAZIONE DELL'ARRAY DEL NOME DEL TEAM
 const teamMembers = [{
     // DESCRIZIONE DEI MEMBRI DEL TEAM (CON "object")
-    photo: "wayne-barnett-founder-ceo.jpg",
+    photo: "pictures/wayne-barnett-founder-ceo.jpg",
     memberName: "Wayne Barnett",
     role: "Founder & CEO",
 },
 {
-    photo: "wayne-barnett-founder-ceo.jpg",
+    photo: "pictures/angela-caroll-chief-editor.jpg",
     memberName: "Angela Caroll",
     role: "Chief Editor",
 },
 {
-    photo: "wayne-barnett-founder-ceo.jpg",
+    photo: "pictures/walter-gordon-office-manager.jpg",
     memberName: "Walter Gordon",
     role: "Office Manager",
 },
 {
-    photo: "wayne-barnett-founder-ceo.jpg",
+    photo: "pictures/angela-lopez-social-media-manager.jpg",
     memberName: "Angela Lopez",
     role: "Social Media Manager",
 },
 {
-    photo: "wayne-barnett-founder-ceo.jpg",
+    photo: "pictures/scott-estrada-developer.jpg",
     memberName: "Scott Estrada",
     role: "Developer",
 },
 {
-    photo: "wayne-barnett-founder-ceo.jpg",
+    photo: "pictures/barbara-ramos-graphic-designer.jpg",
     memberName: "Barbara Ramos",
     role: "Graphic Designer",
 }];
@@ -57,13 +57,15 @@ const container = document.getElementById("container");
 // MANIPOLAZIONE DEL DOM PER OGNI MEMBRO DEL TEAM
 teamMembers.forEach(function (member) {
     const memberInfo = `
-        <div class="card">
-            <img src="${member.photo}" class="card-img-top" alt="${member.memberName}">
-            <div class="card-body">
-                <h5 class="card-title">${member.memberName}</h5>
-                <p class="card-text">${member.role}</p>
+        <div class="col">  
+            <div class="card">
+                <img src="${member.photo}" class="card-img-top" alt="${member.memberName}">
+                <div class="card-body">
+                    <h5 class="card-title">${member.memberName}</h5>
+                    <p class="card-text">${member.role}</p>
+                </div>
             </div>
-        </div>
+        </div>    
     `;
 
     container.innerHTML += memberInfo;
